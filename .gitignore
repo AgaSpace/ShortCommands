@@ -260,3 +260,4 @@ $RECYCLE.BIN/
 /TDiffBackup.sln.DotSettings.user
 /.vscode
 /ShortCommands.sln.DotSettings.user
+/ShortCommands/*.bak
