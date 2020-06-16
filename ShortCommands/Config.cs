@@ -10,7 +10,7 @@ namespace ShortCommands
 {
     public static class Default
     {
-        public static Dictionary<string, string> sc_default = new Dictionary<string, string>() { { "h", "history" }, { "rb", "rollback" }, { "rd", "region define" }, { "r1", "region set 1" }, { "r2", "region set 2" }, { "rn", "region name" }, { "ci", "clear item 30000" }, { "cp", "clear projectile 30000" }, { "p1", "/point1" }, { "p2", "/point2" } };
+        public static Dictionary<string, string> sc_default = new Dictionary<string, string>() { { "r1", "region set 1" }, { "r2", "region set 2" }, { "rn", "region name" }, { "ci", "clear item 30000" }, { "cp", "clear projectile 30000" }};
 
         public static string default_website = @"https://tshock.co/";
     }
