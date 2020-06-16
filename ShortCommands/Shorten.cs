@@ -6,6 +6,7 @@ using System.Reflection;
 using Terraria;
 using TerrariaApi.Server;
 using TShockAPI;
+using TShockAPI.Hooks;
 
 namespace ShortCommands
 {
@@ -49,7 +50,7 @@ namespace ShortCommands
             Commands.ChatCommands.Add(new Command("shortcmd.reload", Reload, "screload"));
         }
 
-        private void OnChat(TShockAPI.Hooks.PlayerCommandEventArgs args)
+        private void OnChat(PlayerCommandEventArgs  args)
         {
             //If the used command is an existing command, ignore.
             if (Commands.TShockCommands.Count(p => p.Name == args.CommandName) > 0 || Commands.ChatCommands.Count(p => p.Name == args.CommandName) > 0)
@@ -134,7 +135,7 @@ namespace ShortCommands
                     string replacer3 = "{player}";
                     if (usecmd.Contains(replacer3))
                     {
-                        usecmd = usecmd.Replace(replacer3, args.Player.User.Name);
+                        usecmd = usecmd.Replace(replacer3, args.Player.Name);
                     }
 
                     string replacer4 = "{website}";
